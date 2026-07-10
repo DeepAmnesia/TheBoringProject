@@ -1,0 +1,20 @@
+std::uint64_t DecryptClActiveItem(std::uint64_t a1)
+{
+    std::uint32_t r9d = 0x02, eax = 0, edx = 0;
+    std::uint32_t* rdx = reinterpret_cast<std::uint32_t*>(&a1);
+    do {
+        eax = *rdx;
+        rdx = reinterpret_cast<std::uint32_t*>(
+            reinterpret_cast<char*>(rdx) + 0x04);
+        // xor eax, 0x320F4C7D
+        eax ^= 0x320F4C7D;
+        edx = eax;
+        // shl eax, 0x1F | shr edx, 0x01 | or edx, eax
+        edx = (edx >> 0x01) | (eax << 0x1F);
+        // add edx, 0x62E951E6
+        edx += 0x62E951E6;
+        *(rdx - 1) = edx;
+        r9d -= 0x01;
+    } while (r9d != 0);
+    return a1;
+}
