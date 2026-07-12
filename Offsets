@@ -88,8 +88,8 @@ namespace Offsets
 	namespace PlayerInventory
 	{
 		constexpr const static size_t containerMain = 0x78;
-		constexpr const static size_t containerBelt = 0x30;
-		constexpr const static size_t containerWear = 0x58;
+		constexpr const static size_t containerBelt = 0x58;
+		constexpr const static size_t containerWear = 0x30;
 	};
 
 	namespace ItemContainer
@@ -183,7 +183,7 @@ namespace Offsets
 		constexpr const static size_t heldEntity = 0x60;
 		constexpr const static size_t heldEntity1 = 0xC8;
 		constexpr const static size_t info = 0xA8;
-		constexpr const static size_t uid = 0x98;
+		constexpr const static size_t uid = 0xB8;
 		constexpr const static size_t health = 0x28;
 		constexpr const static size_t max_health = 0xE8;
 	};
