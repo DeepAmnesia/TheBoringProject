@@ -1,18 +1,25 @@
 std::uint64_t decrypt_bn1(std::uint64_t a1)
 {
-    uint64_t value = g_HyperInterface->read<uint64_t>(a1 + 0x18);
-    uint32_t* data = (uint32_t*)&value;
-    uint32_t count = 2;
+    std::uintptr_t rax = g_HyperInterface->read<std::uintptr_t>(a1 + 0x18);
 
+    std::uint32_t* rdx = (std::uint32_t*)&rax;
+    std::uint32_t r8d = 0x2;
+    std::uint32_t eax, ecx;
     do
     {
-        uint32_t x = *data;
-        uint32_t y = x + 23732553;
-        uint32_t result = ((y << 7) | (y >> 25)) + 70083743;
-        *data = result;
-        data++;
-        --count;
-    } while (count);
-
-    return value;
+        ecx = *(std::uint32_t*)(rdx);
+        eax = *(std::uint32_t*)(rdx);
+        rdx = (std::uint32_t*)((std::uint8_t*)rdx + 0x4);
+        ecx = ecx + 0xB97F1AE1;
+        eax = ecx;
+        ecx = ecx << 0x1D;
+        eax = eax >> 0x3;
+        ecx = ecx | eax;
+        ecx = ecx + 0x32BEE2A5;
+        ecx = ecx ^ 0xE58A30D8;
+        *((std::uint32_t*)rdx - 1) = ecx;
+        --r8d;
+    } while (r8d);
+    
+    return rax;
 }
