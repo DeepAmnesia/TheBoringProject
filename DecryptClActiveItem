@@ -1,31 +1,19 @@
 std::uint64_t DecryptClActiveItem(std::uint64_t a1)
 {
-    uint32_t eax = 0, ebx = 0, ecx = 0, edx = 0, esi = 0, edi = 0;
-    uint32_t r8d = 0, r9d = 0, r10d = 0, r11d = 0;
-    uintptr_t rax = 0, rbx = 0, rcx = 0, rdx = 0, rsi = 0, rdi = 0;
-    uintptr_t r8 = 0, r9 = 0, r10 = 0, r11 = 0;
-    
-    uintptr_t val = a1;
-    r8 = (uintptr_t)&val;
-    
-    for (uint32_t i = 2; i > 0; --i) {
-        edx = *(uint32_t*)(r8); // mov edx, [r8]
-        rdx = edx;  // (x86-64 zero-extension)
-        eax = *(uint32_t*)(r8); // mov eax, [r8]
-        rax = eax;  // (x86-64 zero-extension)
-        r8 = (uintptr_t)((uint8_t*)r8 + 0x04); // lea r8, [r8+0x04]
-        edx >>= 0x02; // shr edx, 0x02
-        rdx = edx;  // (x86-64 zero-extension)
-        eax <<= 0x1E; // shl eax, 0x1E
-        rax = eax;  // (x86-64 zero-extension)
-        edx |= eax; // or edx, eax
-        rdx = edx;  // (x86-64 zero-extension)
-        edx ^= 0x4ED09CE6; // xor edx, 0x4ED09CE6
-        rdx = edx;  // (x86-64 zero-extension)
-        edx -= 0x2521E783; // sub edx, 0x2521E783
-        rdx = edx;  // (x86-64 zero-extension)
-        *((uint32_t*)r8 - 1) = edx; // mov [r8-0x04], edx
-    }
-    
-    return val;
+    std::uint32_t* rdx = (std::uint32_t*)&a1;
+	std::uint32_t r9d = 0x1;
+	std::uint32_t eax, edx;
+
+	do {
+		edx = *(std::uint32_t*)(rdx);
+		eax = *(std::uint32_t*)(rdx);
+		rdx = (std::uint32_t*)((std::uint8_t*)rdx + 0x4);
+		edx = (edx << 0x1E) | (edx >> 0x2);
+		edx = edx ^ 0x4ED09CE6;
+		edx = edx - 0x2521E783;
+		*((std::uint32_t*)rdx - 1) = edx;
+		--r9d;
+	} while (r9d);
+
+	return a1;
 }
