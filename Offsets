@@ -2,14 +2,14 @@
 #include <cstdint>
 
 #include "BaseOffsets.hpp"
-
+#include "RageOffsets.hpp"
 #include "StaticOffsets.hpp"
 
 namespace Offsets
 {
 	namespace BaseNetworkable
 	{
-		constexpr const static size_t children = 0x70;
+		constexpr const static size_t children = 0x88;
 		constexpr const static size_t parentEntity = 0x38;
 	};
 
@@ -34,13 +34,13 @@ namespace Offsets
 	namespace PlayerModel
 	{
 		constexpr const static size_t IsNpckk__BackingField = 0x3E0;
-		constexpr const static size_t multiMesh = 0x420;
+		constexpr const static size_t multiMesh = 0x448;
 		constexpr const static size_t newVelocity = 0x1F8;
 	};
 
 	namespace SkinnedMultiMesh
 	{
-		constexpr const static size_t renderers = 0x50;
+		constexpr const static size_t renderers = 0x58;
 	};
 
 	namespace ProjectileWeaponMod
@@ -71,7 +71,7 @@ namespace Offsets
 
 	namespace PositionLerp
 	{
-		constexpr const static size_t interpolator = 0x10;
+		constexpr const static size_t interpolator = 0x18;
 	};
 
 	namespace Interpolator
@@ -87,25 +87,25 @@ namespace Offsets
 
 	namespace PlayerInventory
 	{
-		constexpr const static size_t containerMain = 0x78;
+		constexpr const static size_t containerMain = 0x38;
 		constexpr const static size_t containerBelt = 0x58;
 		constexpr const static size_t containerWear = 0x30;
 	};
 
 	namespace ItemContainer
 	{
-		constexpr const static size_t itemList = 0x60;
+		constexpr const static size_t itemList = 0x58;
 	};
 
 	namespace BasePlayer
 	{
-		constexpr const static size_t PlayerModel = 0x3D8;
-		constexpr const static size_t playerInput = 0x338;
+		constexpr const static size_t PlayerModel = 0x6F0;
+		constexpr const static size_t playerInput = 0x3A8;
 		constexpr const static size_t clActiveItem = 0x568;
 		constexpr const static size_t PlayerFlags = 0x6B8;
-		constexpr const static size_t playerName = 0x2E8;
+		constexpr const static size_t playerName = 0x2D8;
 		constexpr const static size_t CurrentTeam = 0x538;
-		constexpr const static size_t movement = 0x5B8;
+		constexpr const static size_t movement = 0x4E0;
 	};
 
 	namespace BaseProjectile
@@ -170,7 +170,7 @@ namespace Offsets
 
 	namespace HeldEntity
 	{
-		constexpr const static size_t ViewModel = 0x2C8;
+		constexpr const static size_t ViewModel = 0x1F0;
 	};
 
 	namespace WorldItem
@@ -180,12 +180,12 @@ namespace Offsets
 
 	namespace Item
 	{
-		constexpr const static size_t heldEntity = 0x60;
-		constexpr const static size_t heldEntity1 = 0xC8;
-		constexpr const static size_t info = 0xA8;
-		constexpr const static size_t uid = 0xB8;
-		constexpr const static size_t health = 0x28;
-		constexpr const static size_t max_health = 0xE8;
+		constexpr const static size_t heldEntity = 0x80;
+		constexpr const static size_t heldEntity1 = 0x58;
+		constexpr const static size_t info = 0x70;
+		constexpr const static size_t uid = 0x40;
+		constexpr const static size_t health = 0x48;
+		constexpr const static size_t max_health = 0xB0;
 	};
 
 	namespace RecoilProperties
@@ -212,8 +212,8 @@ namespace Offsets
 
 	namespace BaseViewModel
 	{
-		constexpr const static size_t ViewmodelBob = 0xC0;
-		constexpr const static size_t ViewmodelLower = 0xD0;
+		constexpr const static size_t ViewmodelBob = 0xC8;
+		constexpr const static size_t ViewmodelLower = 0xC0;
 	};
 
 	namespace TOD_NightParameters
