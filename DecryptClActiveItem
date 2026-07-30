@@ -9,20 +9,20 @@ std::uint64_t DecryptClActiveItem(std::uint64_t a1)
     r8 = (uintptr_t)&val;
     
     for (uint32_t i = 2; i > 0; --i) {
-        edx = *(uint32_t*)(r8); // mov edx, [r8]
-        rdx = edx;  // (x86-64 zero-extension)
         eax = *(uint32_t*)(r8); // mov eax, [r8]
         rax = eax;  // (x86-64 zero-extension)
         r8 = (uintptr_t)((uint8_t*)r8 + 0x04); // lea r8, [r8+0x04]
-        edx >>= 0x02; // shr edx, 0x02
-        rdx = edx;  // (x86-64 zero-extension)
-        eax <<= 0x1E; // shl eax, 0x1E
+        eax ^= 0x8AE931D7; // xor eax, 0x8AE931D7
         rax = eax;  // (x86-64 zero-extension)
+        edx = eax; // mov edx, eax
+        rdx = edx;  // (x86-64 zero-extension)
+        eax <<= 0x17; // shl eax, 0x17
+        rax = eax;  // (x86-64 zero-extension)
+        edx >>= 0x09; // shr edx, 0x09
+        rdx = edx;  // (x86-64 zero-extension)
         edx |= eax; // or edx, eax
         rdx = edx;  // (x86-64 zero-extension)
-        edx ^= 0x4ED09CE6; // xor edx, 0x4ED09CE6
-        rdx = edx;  // (x86-64 zero-extension)
-        edx -= 0x2521E783; // sub edx, 0x2521E783
+        edx += 0x25B129D5; // add edx, 0x25B129D5
         rdx = edx;  // (x86-64 zero-extension)
         *((uint32_t*)r8 - 1) = edx; // mov [r8-0x04], edx
     }
