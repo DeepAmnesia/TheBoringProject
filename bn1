@@ -1,25 +1,24 @@
 std::uint64_t decrypt_bn1(std::uint64_t a1)
 {
-    std::uintptr_t rax = g_HyperInterface->read<std::uintptr_t>(a1 + 0x18);
-
-    std::uint32_t* rdx = (std::uint32_t*)&rax;
-    std::uint32_t r8d = 0x2;
-    std::uint32_t eax, ecx;
-    do
-    {
-        ecx = *(std::uint32_t*)(rdx);
-        eax = *(std::uint32_t*)(rdx);
-        rdx = (std::uint32_t*)((std::uint8_t*)rdx + 0x4);
-        ecx = ecx + 0xB97F1AE1;
-        eax = ecx;
-        ecx = ecx << 0x1D;
-        eax = eax >> 0x3;
-        ecx = ecx | eax;
-        ecx = ecx + 0x32BEE2A5;
-        ecx = ecx ^ 0xE58A30D8;
-        *((std::uint32_t*)rdx - 1) = ecx;
-        --r8d;
-    } while (r8d);
+    uint32_t eax = 0, ecx = 0, r14d = 0;
+    uintptr_t rax = 0, rbx = 0, rcx = a1, rdi = a1;
+    
+    rax = g_HyperInterface->read<uintptr_t>(rdi + 0x18);
+    uint32_t* rdx = (uint32_t*)&rax;
+    
+    for (uint32_t r8d = 2; r8d > 0; --r8d) {
+        // UNHANDLED INSTRUCTION: nop
+        eax = *(uint32_t*)(rdx); // mov eax, [rdx]
+        rdx = (uint32_t*)((uint8_t*)rdx + 0x04); // lea rdx, [rdx+0x04]
+        eax -= 0x5ADF7A4E; // sub eax, 0x5ADF7A4E
+        eax ^= 0xFFFFFFFFD5554086; // xor eax, 0xD5554086
+        ecx = eax; // mov ecx, eax
+        ecx >>= 0x1D; // shr ecx, 0x1D
+        eax = eax * 8; // lea eax, [rax*8]
+        ecx |= eax; // or ecx, eax
+        ecx -= 0x33B0F636; // sub ecx, 0x33B0F636
+        *((uint32_t*)rdx - 1) = ecx; // mov [rdx-0x04], ecx
+    }
     
     return rax;
 }
