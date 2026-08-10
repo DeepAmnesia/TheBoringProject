@@ -7,285 +7,273 @@
 
 namespace Offsets
 {
-	namespace ListComponentProjectile
-	{
-		constexpr const static size_t offset = 0x30C7D4F0;
-	};
-
-	namespace Projectile
-	{
-		constexpr const static size_t mod = 0x108;
-		constexpr const static size_t thickness = 0x3C;
-	};
-
-	namespace ItemModProjectile
-	{
-		constexpr const static size_t spread = 0x3C;
-	};
-
 	namespace BaseNetworkable
 	{
-		constexpr const static size_t children = 0x80;
-		constexpr const static size_t parentEntity = 0x38;
+		constexpr size_t children = 0x88;
+		constexpr size_t parentEntity = 0x38;
 	};
 
 	namespace BaseCombatEntity
 	{
-		constexpr const static size_t lifestate = 0x298;
-		constexpr const static size_t skeletonProperties = 0x220;
+		constexpr size_t lifestate = 0x2A8;
+		constexpr size_t skeletonProperties = 0x230;
 	};
 
 	namespace SkeletonProperties
 	{
-		constexpr const static size_t quickLookup = 0x28;
-		constexpr const static size_t bones = 0x20;
+		constexpr size_t quickLookup = 0x28;
+		constexpr size_t bones = 0x20;
 	};
 
 	namespace SkeletonProperties_BoneProperty
 	{
-		constexpr const static size_t area = 0x20;
-		constexpr const static size_t name = 0x18;
+		constexpr size_t area = 0x20;
+		constexpr size_t name = 0x18;
 	};
 
 	namespace PlayerModel
 	{
-		constexpr const static size_t IsNpckk__BackingField = 0x3E0;
-		constexpr const static size_t multiMesh = 0x3B8;
-		constexpr const static size_t newVelocity = 0x1F8;
+		constexpr size_t IsNpckk__BackingField = 0x3E0;
+		constexpr size_t multiMesh = 0x380;
+		constexpr size_t newVelocity = 0x31C;
 	};
 
 	namespace SkinnedMultiMesh
 	{
-		constexpr const static size_t renderers = 0x50;
+		constexpr size_t renderers = 0x40;
 	};
 
 	namespace ProjectileWeaponMod
 	{
-		constexpr const static size_t hipAimCone = 0x270;
-		constexpr const static size_t projectileVelocity = 0x21C;
-		constexpr const static size_t recoil = 0x258;
-		constexpr const static size_t sightAimCone = 0x264;
+		constexpr size_t hipAimCone = 0x280;
+		constexpr size_t projectileVelocity = 0x22C;
+		constexpr size_t recoil = 0x268;
+		constexpr size_t sightAimCone = 0x274;
 	};
 
 	namespace AttackEntity
 	{
-		constexpr const static size_t deployDelay = 0x2D8;
-		constexpr const static size_t repeatDelay = 0x2DC;
+		constexpr size_t deployDelay = 0x2E8;
+		constexpr size_t repeatDelay = 0x2EC;
 	};
 
 	namespace BaseEntity
 	{
-		constexpr const static size_t model = 0x1A8;
-		constexpr const static size_t positionLerp = 0xB8;
-		constexpr const static size_t flags = 0x1B0;
+		constexpr size_t model = 0x1B8;
+		constexpr size_t positionLerp = 0xE8;
+		constexpr size_t flags = 0x1C0;
 	};
 
 	namespace HackableLockedCrate
 	{
-		constexpr const static size_t timerText = 0x3F0;
+		constexpr size_t timerText = 0x400;
 	};
 
 	namespace PositionLerp
 	{
-		constexpr const static size_t interpolator = 0x30;
+		constexpr size_t interpolator = 0x48;
 	};
 
 	namespace Interpolator
 	{
-		constexpr const static size_t last = 0x10;
-		constexpr const static size_t list = 0x30;
+		constexpr size_t last = 0x10;
+		constexpr size_t list = 0x30;
 	};
 
 	namespace ViewModel
 	{
-		constexpr const static size_t instance = 0x28;
+		constexpr size_t instance = 0x28;
 	};
 
 	namespace PlayerInventory
 	{
-		constexpr const static size_t containerMain = 0x38;
-		constexpr const static size_t containerBelt = 0x28;
-		constexpr const static size_t containerWear = 0x58;
+		constexpr size_t containerMain = 0x58;
+		constexpr size_t containerBelt = 0x38;
+		constexpr size_t containerWear = 0x78;
 	};
 
 	namespace ItemContainer
 	{
-		constexpr const static size_t itemList = 0x48;
+		constexpr size_t itemList = 0x38;
 	};
 
 	namespace BasePlayer
 	{
-		constexpr const static size_t PlayerModel = 0x3F0;
-		constexpr const static size_t playerInput = 0x728;
-		constexpr const static size_t clActiveItem = 0x568;
-		constexpr const static size_t PlayerFlags = 0x6B8;
-		constexpr const static size_t playerName = 0x4A8;
-		constexpr const static size_t CurrentTeam = 0x538;
-		constexpr const static size_t movement = 0x6F8;
+		constexpr size_t PlayerModel = 0x340;
+		constexpr size_t playerInput = 0x3B8;
+		constexpr size_t clActiveItem = 0x580;
+		constexpr size_t PlayerFlags = 0x6D0;
+		constexpr size_t playerName = 0x390;
+		constexpr size_t CurrentTeam = 0x550;
+		constexpr size_t movement = 0x520;
 	};
 
 	namespace BaseProjectile
 	{
-		constexpr const static size_t aimCone = 0x400;
-		constexpr const static size_t aimSway = 0x3E8;
-		constexpr const static size_t aimSwaySpeed = 0x3EC;
-		constexpr const static size_t CrosshairSettings = 0x420;
-		constexpr const static size_t isAutomatic = 0x380;
-		constexpr const static size_t primaryMagazine = 0x3C8;
-		constexpr const static size_t projectileVelocityScale = 0x37C;
-		constexpr const static size_t recoil = 0x3F0;
+		constexpr size_t aimCone = 0x410;
+		constexpr size_t aimSway = 0x3F8;
+		constexpr size_t aimSwaySpeed = 0x3FC;
+		constexpr size_t CrosshairSettings = 0x430;
+		constexpr size_t isAutomatic = 0x390;
+		constexpr size_t primaryMagazine = 0x3D8;
+		constexpr size_t projectileVelocityScale = 0x38C;
+		constexpr size_t recoil = 0x400;
+		constexpr size_t sightAimConeScale = 0x46c;
+		constexpr size_t sightAimConeOffset = 0x470;
+		constexpr size_t hipAimConeScale = 0x474;
+		constexpr size_t hipAimConeOffset = 0x478;
 	};
 
 	namespace Model
 	{
-		constexpr const static size_t BoneTransforms = 0x50;
+		constexpr size_t BoneTransforms = 0x50;
 	};
 
 	namespace BowWeapon
 	{
-		constexpr const static size_t ArrowBack = 0x0;
-		constexpr const static size_t AttackArrow = 0x0;
-		constexpr const static size_t SomeDelay = 0x0;
+		constexpr size_t ArrowBack = 0x4A8;
+		constexpr size_t AttackArrow = 0x4B8;
+		constexpr size_t SomeDelay = 0x4AC;
 	};
 
 	namespace CompoundBowWeapon
 	{
-		constexpr const static size_t stringHoldDurationMax = 0x4C0;
+		constexpr size_t stringHoldDurationMax = 0x4D0;
 	};
 
 	namespace FlintStrikeWeapon
 	{
-		constexpr const static size_t successFraction = 0x4A8;
-		constexpr const static size_t _didSparkThisFrame = 0x4B8;
+		constexpr size_t successFraction = 0x4B8;
+		constexpr size_t _didSparkThisFrame = 0x4C8;
 	};
 
 	namespace BaseMelee
 	{
-		constexpr const static size_t attackRadius = 0x394;
-		constexpr const static size_t blockSprintOnAttack = 0x399;
-		constexpr const static size_t maxDistance = 0x390;
+		constexpr size_t attackRadius = 0x3A4;
+		constexpr size_t blockSprintOnAttack = 0x3A9;
+		constexpr size_t maxDistance = 0x3A0;
 	};
 
 	namespace ItemDefinition
 	{
-		constexpr const static size_t displayName = 0x40;
-		constexpr const static size_t itemid = 0x20;
-		constexpr const static size_t shortName = 0x28;
-		constexpr const static size_t category = 0x58;
+		constexpr size_t displayName = 0x40;
+		constexpr size_t itemid = 0x20;
+		constexpr size_t shortName = 0x28;
+		constexpr size_t category = 0x58;
 	};
 
 	namespace Translate_Phrase
 	{
-		constexpr const static size_t legacyEnglish = 0x20;
+		constexpr size_t legacyEnglish = 0x20;
 	};
 
 	namespace BaseProjectile_Magazine
 	{
-		constexpr const static size_t ammoType = 0x20;
+		constexpr size_t ammoType = 0x20;
 	};
 
 	namespace HeldEntity
 	{
-		constexpr const static size_t ViewModel = 0x2C8;
+		constexpr size_t ViewModel = 0x250;
 	};
 
 	namespace WorldItem
 	{
-		constexpr const static size_t item = 0x1F8;
+		constexpr size_t item = 0x208;
 	};
 
 	namespace Item
 	{
-		constexpr const static size_t heldEntity = 0x40;
-		constexpr const static size_t heldEntity1 = 0x58;
-		constexpr const static size_t info = 0xB8;
-		constexpr const static size_t uid = 0x20;
-		constexpr const static size_t health = 0x80;
-		constexpr const static size_t max_health = 0x94;
+		constexpr size_t heldEntity = 0x98;
+		constexpr size_t heldEntity1 = 0x48;
+		constexpr size_t info = 0xD0;
+		constexpr size_t uid = 0x88;
+		constexpr size_t health = 0x14;
+		constexpr size_t max_health = 0x18;
 	};
 
 	namespace RecoilProperties
 	{
-		constexpr const static size_t recoilPitchMin = 0x20;
-		constexpr const static size_t recoilPitchMax = 0x24;
-		constexpr const static size_t recoilYawMin = 0x18;
-		constexpr const static size_t recoilYawMax = 0x1C;
-		constexpr const static size_t newRecoilOverride = 0x80;
+		constexpr size_t recoilPitchMin = 0x20;
+		constexpr size_t recoilPitchMax = 0x24;
+		constexpr size_t recoilYawMin = 0x18;
+		constexpr size_t recoilYawMax = 0x1C;
+		constexpr size_t newRecoilOverride = 0x80;
 	};
 
 	namespace ViewmodelLower
 	{
-		constexpr const static size_t shouldLower = 0x28;
-		constexpr const static size_t lowerOnSprint = 0x20;
-		constexpr const static size_t lowerWhenCantAttack = 0x21;
+		constexpr size_t shouldLower = 0x28;
+		constexpr size_t lowerOnSprint = 0x20;
+		constexpr size_t lowerWhenCantAttack = 0x21;
 	};
 
 	namespace ViewmodelBob
 	{
-		constexpr const static size_t bobSpeedWalk = 0x20;
-		constexpr const static size_t bobSpeedRun = 0x24;
+		constexpr size_t bobSpeedWalk = 0x20;
+		constexpr size_t bobSpeedRun = 0x24;
 	};
 
 	namespace BaseViewModel
 	{
-		constexpr const static size_t ViewmodelBob = 0x108;
-		constexpr const static size_t ViewmodelLower = 0xA0;
+		constexpr size_t ViewmodelBob = 0x98;
+		constexpr size_t ViewmodelLower = 0xB8;
 	};
 
 	namespace TOD_NightParameters
 	{
-		constexpr const static size_t light_intensity = 0x54;
-		constexpr const static size_t ambient_multiplier = 0x60;
-		constexpr const static size_t SkyColor = 0x30;
-		constexpr const static size_t AmbientColor = 0x48;
-		constexpr const static size_t CloudColor = 0x38;
-		constexpr const static size_t LightColor = 0x20;
-		constexpr const static size_t FogColor = 0x40;
-		constexpr const static size_t MoonColor = 0x10;
-		constexpr const static size_t RedMoonColor = 0x18;
-		constexpr const static size_t RayColor = 0x28;
+		constexpr size_t light_intensity = 0x54;
+		constexpr size_t ambient_multiplier = 0x60;
+		constexpr size_t SkyColor = 0x30;
+		constexpr size_t AmbientColor = 0x48;
+		constexpr size_t CloudColor = 0x38;
+		constexpr size_t LightColor = 0x20;
+		constexpr size_t FogColor = 0x40;
+		constexpr size_t MoonColor = 0x10;
+		constexpr size_t RedMoonColor = 0x18;
+		constexpr size_t RayColor = 0x28;
 	};
 
 	namespace TOD_DayParameters
 	{
-		constexpr const static size_t cur_amb = 0x58;
-		constexpr const static size_t cur_reflection = 0x60;
-		constexpr const static size_t SkyColor = 0x28;
-		constexpr const static size_t AmbientColor = 0x40;
-		constexpr const static size_t CloudColor = 0x30;
-		constexpr const static size_t LightColor = 0x18;
-		constexpr const static size_t FogColor = 0x38;
-		constexpr const static size_t SunColor = 0x10;
-		constexpr const static size_t RayColor = 0x20;
+		constexpr size_t cur_amb = 0x58;
+		constexpr size_t cur_reflection = 0x60;
+		constexpr size_t SkyColor = 0x28;
+		constexpr size_t AmbientColor = 0x40;
+		constexpr size_t CloudColor = 0x30;
+		constexpr size_t LightColor = 0x18;
+		constexpr size_t FogColor = 0x38;
+		constexpr size_t SunColor = 0x10;
+		constexpr size_t RayColor = 0x20;
 	};
 
 	namespace TOD_SunParameters
 	{
-		constexpr const static size_t MeshBrightness = 0x14;
-		constexpr const static size_t MeshBrightnessDefault = 0x18;
-		constexpr const static size_t MeshSize = 0x10;
+		constexpr size_t MeshBrightness = 0x14;
+		constexpr size_t MeshBrightnessDefault = 0x18;
+		constexpr size_t MeshSize = 0x10;
 	};
 
 	namespace TOD_AtmosphereParameters
 	{
-		constexpr const static size_t Fogginess = 0x2C;
+		constexpr size_t Fogginess = 0x2C;
 	};
 
 	namespace TOD_AmbientParameters
 	{
-		constexpr const static size_t UpdateInterval = 0x18;
+		constexpr size_t UpdateInterval = 0x18;
 	};
 
 	namespace TOD_CycleParameters
 	{
-		constexpr const static size_t Hour = 0x10;
+		constexpr size_t Hour = 0x10;
 	};
 
 	namespace TOD_StarParameters
 	{
-		constexpr const static size_t Brightness = 0x14;
-		constexpr const static size_t Size = 0x10;
-		constexpr const static size_t Color = 0x1C;
+		constexpr size_t Brightness = 0x14;
+		constexpr size_t Size = 0x10;
+		constexpr size_t Color = 0x1C;
 	};
 
 }
