@@ -1,25 +1,19 @@
 std::uint64_t decrypt_list1(std::uint64_t a1)
 {
-    std::uintptr_t rax = g_HyperInterface->read<std::uintptr_t>(a1 + 0x18);
-    std::uint32_t* rdx = (std::uint32_t*)&rax;
+    uint64_t value = g_HyperInterface->read<uint64_t>(a1 + 0x18);
+    if (!value)
+        return 0;
 
-    std::uint32_t r8d = 0x2;
-    std::uint32_t eax, ecx;
-    do
-    {
-        ecx = *(std::uint32_t*)(rdx);
-        eax = *(std::uint32_t*)(rdx);
-        rdx = (std::uint32_t*)((std::uint8_t*)rdx + 0x4);
-        eax += 0x4FAAB989;
-        ecx = eax;
-        eax <<= 0x19;
-        ecx >>= 0x07;
-        ecx |= eax;
-        ecx ^= 0xFFFFFFFFCC2A9C79;
-        ecx -= 0x4EFECC5E;
-        *((std::uint32_t*)rdx - 1) = ecx;
-        --r8d;
-    } while (r8d);
+    uint32_t* chunks = reinterpret_cast<uint32_t*>(&value);
 
-    return rax;
+    for (int i = 0; i < 2; i++) {
+        uint32_t v = chunks[i];
+        v += 0x0374D4FAu;
+        v = (v << 27) | (v >> 5);
+        v ^= 0x5DD1D7B5u;
+        v -= 0x10D77418u;
+        chunks[i] = v;
+    }
+
+    return value;
 }
