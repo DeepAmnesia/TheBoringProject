@@ -33,7 +33,7 @@ namespace Offsets
 
 	namespace PlayerModel
 	{
-		constexpr size_t IsNpckk__BackingField = 0x3E0;
+		constexpr size_t IsNpckk__BackingField = 0x4cc;
 		constexpr size_t multiMesh = 0x380;
 		constexpr size_t newVelocity = 0x31C;
 	};
