@@ -9,6 +9,7 @@ namespace Offsets
 {
 	namespace BaseNetworkable
 	{
+	    constexpr size_t net = 0x70;
 		constexpr size_t children = 0x88;
 		constexpr size_t parentEntity = 0x38;
 	};
