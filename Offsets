@@ -40,7 +40,7 @@ namespace Offsets
 
 	namespace SkinnedMultiMesh
 	{
-		constexpr const static size_t renderers = 0x20;
+		constexpr const static size_t renderers = 0x58;
 	};
 
 	namespace ProjectileWeaponMod
@@ -87,14 +87,14 @@ namespace Offsets
 
 	namespace PlayerInventory
 	{
-		constexpr const static size_t containerMain = 0x78;
-		constexpr const static size_t containerBelt = 0x60;
+		constexpr const static size_t containerMain = 0x60;
+		constexpr const static size_t containerBelt = 0x78;
 		constexpr const static size_t containerWear = 0x58;
 	};
 
 	namespace ItemContainer
 	{
-		constexpr const static size_t itemList = 0x10;
+		constexpr const static size_t itemList = 0x58;
 	};
 
 	namespace BasePlayer
