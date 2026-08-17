@@ -1,17 +1,14 @@
 uint64_t decrypt_list1(uint64_t a1)
 {
-    uint64_t rax = g_HyperInterface->read<uint64_t>(a1 + 0x18);
+   uint64_t rax = g_HyperInterface->read<uint64_t>(a1 + 0x18);
     uint32_t* chunks = (uint32_t*)&rax;
-
     for (int i = 0; i < 2; i++)
     {
         uint32_t v = chunks[i];
-        v += 0x0374D4FAu;
-        v = (v << 27) | (v >> 5);
-        v ^= 0x5DD1D7B5u;
-        v -= 0x10D77418u;
+        v ^= 0xE3A0F8FBu;
+        v += 0x26BE655Bu;
+        v = (v << 30) | (v >> 2);  // rotl32 на 30 (rotr32 на 2)
         chunks[i] = v;
     }
-
     return rax;
 }
