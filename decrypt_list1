@@ -6,10 +6,10 @@ uint64_t decrypt_list1(uint64_t a1)
     for (int i = 0; i < 2; i++)
     {
         uint32_t v = chunks[i];
-        v += 0x0374D4FAu;
-        v = (v << 27) | (v >> 5);
-        v ^= 0x5DD1D7B5u;
-        v -= 0x10D77418u;
+        v ^= 0xE3A0F8FBu;
+        v = (v << 3) | (v >> 29);
+        v += 0x26BE655Bu;
+        v = (v << 30) | (v >> 2);
         chunks[i] = v;
     }
 
