@@ -5,33 +5,33 @@ namespace Offsets
 {
     namespace Camera
     {
-        constexpr uintptr_t MainCamera = 0x1083f688;
-        constexpr uintptr_t Step1 = 0xB8;
-        constexpr uintptr_t Step2 = 0x38;
-        constexpr uintptr_t Step3 = 0x10;
+        constexpr uintptr_t MainCamera = 0x1083f688; 
+        constexpr uintptr_t Step1      = 0xB8;        
+        constexpr uintptr_t Step2      = 0x38;       
+        constexpr uintptr_t Step3      = 0x10;       
     }
 
     namespace BaseNetworkable
     {
-        constexpr uintptr_t BaseNetworkable = 0x10897ee8;
-        constexpr uintptr_t Step1 = 0xB8;
-        constexpr uintptr_t Step2 = 0x8;
-        constexpr uintptr_t Step3 = 0x10;
-        constexpr uintptr_t Step4 = 0x20;
+        constexpr uintptr_t BaseNetworkable = 0x10897ee8; 
+        constexpr uintptr_t Step1 = 0xB8;                 
+        constexpr uintptr_t Step2 = 0x8;                
+        constexpr uintptr_t Step3 = 0x10;               
+        constexpr uintptr_t Step4 = 0x20;               
     }
 
     namespace Sky
     {
-        constexpr uintptr_t TOD_Sky = 0x108b07d8;
-        constexpr uintptr_t Step1 = 0xB8;
-        constexpr uintptr_t Step2 = 0x28;
-        constexpr uintptr_t Step3 = 0x10;
-        constexpr uintptr_t Step4 = 0x20;
+        constexpr uintptr_t TOD_Sky = 0x108b07d8; 
+        constexpr uintptr_t Step1   = 0xB8;     
+        constexpr uintptr_t Step2   = 0x18;     
+        constexpr uintptr_t Step3   = 0x10;    
+        constexpr uintptr_t Step4   = 0x20; 
     }
 
     namespace Fov
     {
-        constexpr uintptr_t GraphicFov = 0x1084ee18;
-        constexpr uintptr_t fieldOffset = 0x38;
+        constexpr uintptr_t GraphicFov   = 0x1084ee18; 
+        constexpr uintptr_t fieldOffset  = 0x38;   
     }
 }
