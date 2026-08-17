@@ -1,18 +1,15 @@
 std::uint64_t DecryptClActiveItem(std::uint64_t a1)
 {
-    uint64_t encrypted = a1;
-    uint64_t value = encrypted;
-    uint32_t* chunks = reinterpret_cast<uint32_t*>(&value);
-    
-    for (int i = 0; i < 2; i++) 
+    std::uint64_t rax = a1;
+    std::uint32_t* chunks = (std::uint32_t*)&rax;
+
+    for (int i = 0; i < 2; i++)
     {
-        uint32_t v = chunks[i];
-        v ^= 0xC7F486D7u;
-        v += 0x021AB371u;
-        v = (v << 11) | (v >> 21);
-        v += 0x70077F50u;
+        std::uint32_t v = chunks[i];
+        v ^= 0x4A187FCEu;
+        v += 0x30A95362u;
         chunks[i] = v;
-     }
-    
-     return value;
+    }
+
+    return rax;
 }
