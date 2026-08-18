@@ -34,13 +34,13 @@ namespace Offsets
 	namespace PlayerModel
 	{
 		constexpr const static size_t IsNpckk__BackingField = 0x4CC;
-		constexpr const static size_t multiMesh = 0x2F0;
+		constexpr const static size_t multiMesh = 0x460;
 		constexpr const static size_t newVelocity = 0x31C;
 	};
 
 	namespace SkinnedMultiMesh
 	{
-		constexpr const static size_t renderers = 0x20;
+		constexpr const static size_t renderers = 0x58;
 	};
 
 	namespace ProjectileWeaponMod
