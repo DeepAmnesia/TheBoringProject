@@ -118,10 +118,10 @@ namespace Offsets
 		constexpr const static size_t primaryMagazine = 0x3D8;
 		constexpr const static size_t projectileVelocityScale = 0x38C;
 		constexpr const static size_t recoil = 0x400;
-		constexpr const static size_t sightAimConeScale = 0x384;
-		constexpr const static size_t sightAimConeOffset = 0x388;
-		constexpr const static size_t hipAimConeScale = 0x38C;
-		constexpr const static size_t hipAimConeOffset = 0x390;
+		constexpr const static size_t sightAimConeScale = 0x46C;
+		constexpr const static size_t sightAimConeOffset = 0x46C;
+		constexpr const static size_t hipAimConeScale = 0x474;
+		constexpr const static size_t hipAimConeOffset = 0x474;
 	};
 
 	namespace Model
