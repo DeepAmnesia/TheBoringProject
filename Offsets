@@ -40,7 +40,7 @@ namespace Offsets
 
 	namespace SkinnedMultiMesh
 	{
-		constexpr const static size_t renderers = 0x58;
+		constexpr const static size_t renderers = 0x20;
 	};
 
 	namespace ProjectileWeaponMod
@@ -87,14 +87,14 @@ namespace Offsets
 
 	namespace PlayerInventory
 	{
-		constexpr const static size_t containerMain = 0x60;
-		constexpr const static size_t containerBelt = 0x78;
-		constexpr const static size_t containerWear = 0x58;
+		constexpr const static size_t containerMain = 0x78;
+		constexpr const static size_t containerBelt = 0x58;
+		constexpr const static size_t containerWear = 0x60;
 	};
 
 	namespace ItemContainer
 	{
-		constexpr const static size_t itemList = 0x58;
+		constexpr const static size_t itemList = 0x10;
 	};
 
 	namespace BasePlayer
@@ -103,7 +103,7 @@ namespace Offsets
 		constexpr const static size_t playerInput = 0x6A0;
 		constexpr const static size_t clActiveItem = 0x580;
 		constexpr const static size_t PlayerFlags = 0x6D0;
-		constexpr const static size_t playerName = 0x528;
+		constexpr const static size_t playerName = 0x2D0;
 		constexpr const static size_t CurrentTeam = 0x550;
 		constexpr const static size_t movement = 0x4F0;
 	};
@@ -118,10 +118,10 @@ namespace Offsets
 		constexpr const static size_t primaryMagazine = 0x3D8;
 		constexpr const static size_t projectileVelocityScale = 0x38C;
 		constexpr const static size_t recoil = 0x400;
-		constexpr const static size_t sightAimConeScale = 0x46c;
-		constexpr const static size_t sightAimConeOffset = 0x470;
-		constexpr const static size_t hipAimConeScale = 0x474;
-		constexpr const static size_t hipAimConeOffset = 0x478;
+		constexpr const static size_t sightAimConeScale = 0x384;
+		constexpr const static size_t sightAimConeOffset = 0x388;
+		constexpr const static size_t hipAimConeScale = 0x38C;
+		constexpr const static size_t hipAimConeOffset = 0x390;
 	};
 
 	namespace Model
