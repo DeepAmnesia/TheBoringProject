@@ -13,7 +13,7 @@ namespace Offsets
 
     namespace BaseNetworkable
     {
-        constexpr uintptr_t BaseNetworkable = 0x10897ee8;
+        constexpr uintptr_t BaseNetworkable = 0x1164cc90;
         constexpr uintptr_t Step1 = 0xB8;                 
         constexpr uintptr_t Step2 = 0x8;                
         constexpr uintptr_t Step3 = 0x10;               
