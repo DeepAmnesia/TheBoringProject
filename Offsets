@@ -88,8 +88,8 @@ namespace Offsets
 	namespace PlayerInventory
 	{
 		constexpr const static size_t containerMain = 0x78;
-		constexpr const static size_t containerBelt = 0x58;
-		constexpr const static size_t containerWear = 0x60;
+		constexpr const static size_t containerBelt = 0x60;
+		constexpr const static size_t containerWear = 0x58;
 	};
 
 	namespace ItemContainer
@@ -103,7 +103,7 @@ namespace Offsets
 		constexpr const static size_t playerInput = 0x6A0;
 		constexpr const static size_t clActiveItem = 0x580;
 		constexpr const static size_t PlayerFlags = 0x6D0;
-		constexpr const static size_t playerName = 0x2D0;
+		constexpr const static size_t playerName = 0x6f0;
 		constexpr const static size_t CurrentTeam = 0x550;
 		constexpr const static size_t movement = 0x4F0;
 	};
