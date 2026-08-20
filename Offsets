@@ -180,10 +180,10 @@ namespace Offsets
 
 	namespace Item
 	{
-		constexpr const static size_t heldEntity = 0x88;
-		constexpr const static size_t heldEntity1 = 0xE0;
+	    constexpr const static size_t heldEntity = 0xE0;
+		constexpr const static size_t heldEntity1 = 0x88;
 		constexpr const static size_t info = 0xC0;
-		constexpr const static size_t uid = 0x38;
+		constexpr const static size_t uid = 0xD8;
 		constexpr const static size_t health = 0x10;
 		constexpr const static size_t max_health = 0x40;
 	};
