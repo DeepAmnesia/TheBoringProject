@@ -2,18 +2,13 @@ std::uint64_t DecryptClActiveItem(std::uint64_t a1)
 {
     uint64_t value = a1;
     uint32_t* chunks = reinterpret_cast<uint32_t*>(&value);
-
     for (int i = 0; i < 2; i++)
     {
         uint32_t v = chunks[i];
-
-        v = (v << 30) | (v >> 2);
-        v ^= 0x4A187FCEu;
-        v = (v << 1) | (v >> 31);
-        v += 0x30A95362u;
-
+        v = (v << 28) | (v >> 4);
+        v += 0x4163CC9Au;
+        v ^= 0x3C9AE79Bu;
         chunks[i] = v;
     }
-
     return value;
 }
