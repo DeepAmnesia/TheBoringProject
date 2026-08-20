@@ -19,7 +19,7 @@ namespace Offsets
 		constexpr const static size_t skeletonProperties = 0x230;
 	};
 
-	namespace SkeletonPropertie	s
+	namespace SkeletonProperties
 	{
 		constexpr const static size_t quickLookup = 0x28;
 		constexpr const static size_t bones = 0x20;
@@ -33,9 +33,9 @@ namespace Offsets
 
 	namespace PlayerModel
 	{
-		constexpr const static size_t IsNpckk__BackingField = 0x3E0;
+		constexpr const static size_t IsNpckk__BackingField = 0x4cc;
 		constexpr const static size_t multiMesh = 0xB0;
-		constexpr const static size_t newVelocity = 0x1F8;
+		constexpr const static size_t newVelocity = 0x31c;
 	};
 
 	namespace SkinnedMultiMesh
@@ -88,8 +88,8 @@ namespace Offsets
 	namespace PlayerInventory
 	{
 		constexpr const static size_t containerMain = 0x60;
-		constexpr const static size_t containerBelt = 0x58;
-		constexpr const static size_t containerWear = 0x38;
+		constexpr const static size_t containerBelt = 0x78;
+		constexpr const static size_t containerWear = 0x28;
 	};
 
 	namespace ItemContainer
