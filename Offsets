@@ -45,7 +45,7 @@ namespace Offsets
 
 	namespace ProjectileWeaponMod
 	{
-		constexpr const static size_t hipAimCone = 0x280;
+		constexpr const static size_t hipAimCone = 0x414;
 		constexpr const static size_t projectileVelocity = 0x22C;
 		constexpr const static size_t recoil = 0x268;
 		constexpr const static size_t sightAimCone = 0x274;
@@ -88,8 +88,8 @@ namespace Offsets
 	namespace PlayerInventory
 	{
 		constexpr const static size_t containerMain = 0x60;
-		constexpr const static size_t containerBelt = 0x38;
-		constexpr const static size_t containerWear = 0x58;
+		constexpr const static size_t containerBelt = 0x58;
+		constexpr const static size_t containerWear = 0x38;
 	};
 
 	namespace ItemContainer
