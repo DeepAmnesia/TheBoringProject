@@ -6,9 +6,12 @@ std::uint64_t decrypt_list1(std::uint64_t a1)
     for (int i = 0; i < 2; i++)
     {
         uint32_t v = chunks[i];
-        v = (v << 15) | (v >> 17);
-        v ^= 0xE2181B93u;
-        v = (v << 8) | (v >> 24);
+
+        v -= 0x55362D5Au;
+        v ^= 0x931EEE05u;
+        v = (v << 25) | (v >> 7);
+        v += 0x2AA8649Cu;
+
         chunks[i] = v;
     }
 
