@@ -4,7 +4,7 @@ namespace Offsets
 {
     namespace Camera
     {
-        constexpr uintptr_t MainCamera = 0x116830F8;
+        constexpr uintptr_t MainCamera = 0x115BB318;
         constexpr uintptr_t Step1      = 0xB8;
         constexpr uintptr_t Step2      = 0x30;
         constexpr uintptr_t Step3      = 0x10;
