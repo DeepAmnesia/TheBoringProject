@@ -9,7 +9,7 @@ namespace Offsets
 {
 	namespace BaseNetworkable
 	{
-		constexpr const static size_t children = 0x28;
+		constexpr const static size_t children = 0x88;
 		constexpr const static size_t parentEntity = 0x38;
 	};
 
@@ -33,9 +33,9 @@ namespace Offsets
 
 	namespace PlayerModel
 	{
-		constexpr const static size_t IsNpckk__BackingField = 0x4cc;
+		constexpr const static size_t IsNpckk__BackingField = 0x3E0;
 		constexpr const static size_t multiMesh = 0xB0;
-		constexpr const static size_t newVelocity = 0x31c;
+		constexpr const static size_t newVelocity = 0x1F8;
 	};
 
 	namespace SkinnedMultiMesh
