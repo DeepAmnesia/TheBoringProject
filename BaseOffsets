@@ -4,14 +4,14 @@ namespace Offsets
 {
     namespace Camera
     {
-        constexpr uintptr_t MainCamera = 0x1167EF00;
+        constexpr uintptr_t MainCamera = 0x115BB318;
         constexpr uintptr_t Step1      = 0xB8;
         constexpr uintptr_t Step2      = 0x38;
         constexpr uintptr_t Step3      = 0x10;
     }
     namespace BaseNetworkable
     {
-        constexpr uintptr_t BaseNetworkable = 0x1164CC90;
+        constexpr uintptr_t BaseNetworkable = 0x115B1A70;
         constexpr uintptr_t Step1 = 0xB8;
         constexpr uintptr_t Step2 = 0x8;
         constexpr uintptr_t Step3 = 0x10;
