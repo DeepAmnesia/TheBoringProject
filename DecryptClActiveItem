@@ -6,7 +6,7 @@ std::uint64_t DecryptClActiveItem(std::uint64_t a1)
     for (int i = 0; i < 2; i++)
     {
         std::uint32_t v = chunks[i];
-        v  = (v << 28) | (v >> 4);
+        v  = (v >> 1) | (v << 31);
         v += 0x1F2ABE36;
         v ^= 0x3788ADB3;
         chunks[i] = v;
