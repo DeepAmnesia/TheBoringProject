@@ -8,9 +8,10 @@ std::uint64_t decrypt_list1(std::uint64_t a1)
 
     for (int i = 0; i < 2; i++) {
         std::uint32_t v = chunks[i];
-        v ^= 0xDD40083B;
-        v -= 0x56499A58;
-        v ^= 0x74FA9C91;
+        v += 0x3F41EF1E;
+        v  = (v << 15) | (v >> 17);
+        v += 0xC46447C5;
+        v  = (v << 15) | (v >> 17);
         chunks[i] = v;
     }
 
