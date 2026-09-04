@@ -1,6 +1,6 @@
-std::uint64_t DecryptClActiveItem(std::uint64_t encrypted_value)
+std::uint64_t DecryptClActiveItem(std::uint64_t a1)
 {
-    std::uint64_t value = encrypted_value;
+    std::uint64_t value = a1;
     std::uint32_t* chunks = reinterpret_cast<std::uint32_t*>(&value);
 
     for (int i = 0; i < 2; i++)
