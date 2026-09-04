@@ -7,9 +7,10 @@ std::uint64_t decrypt_bn1(std::uint64_t a1)
     do {
         std::uint32_t v = *rdx;
         rdx = (std::uint32_t*)((char*)rdx + 4);
-        v ^= 0xDD40083B;
-        v -= 0x56499A58;
-        v ^= 0x74FA9C91;
+        v += 0x3F41EF1E;
+        v  = (v << 15) | (v >> 17);
+        v += 0xC46447C5;
+        v  = (v << 15) | (v >> 17);
         *((std::uint32_t*)rdx - 1) = v;
     } while (--r8d);
 
