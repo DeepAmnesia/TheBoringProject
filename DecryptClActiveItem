@@ -11,5 +11,6 @@ std::uint64_t DecryptClActiveItem(std::uint64_t a1)
         v ^= 0x3788ADB3;
         chunks[i] = v;
     }
+
     return value;
 }
