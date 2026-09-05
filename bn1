@@ -9,7 +9,6 @@ std::uint64_t decrypt_bn1(std::uint64_t a1)
         v += 0x7A62B45Du;
         v ^= 0xDDF0990Bu;
         v = (v << 27) | (v >> 5);
-        v += 0x4289C10Bu;
         chunks[i] = v;
     }
 
