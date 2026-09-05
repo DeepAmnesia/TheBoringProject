@@ -3,13 +3,13 @@ std::uint64_t decrypt_bn1(std::uint64_t a1)
     std::uint64_t value = g_HyperInterface->read<std::uint64_t>(a1 + 0x18);
     std::uint32_t* chunks = reinterpret_cast<std::uint32_t*>(&value);
 
-    for (int i = 0; i < 2; i++) 
+   for (int i = 0; i < 2; i++)
     {
         std::uint32_t v = chunks[i];
-        v += 0x7A62B45D;
-        v ^= 0xDDF0990B;
-        v = (v << 0x1B) | (v >> 0x5);
-        v += 0x4289C10B;
+        v = v + 0x7a62b45d;
+        v = v ^ 0xddf0990b;
+        v = v >> 1;
+        v = v | (v << 31);
         chunks[i] = v;
     }
 
