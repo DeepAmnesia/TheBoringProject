@@ -6,10 +6,10 @@ std::uint64_t DecryptClActiveItem(std::uint64_t a1)
     for (int i = 0; i < 2; i++)
     {
         std::uint32_t v = chunks[i];
-        v ^= 0x537C2A57;
-        v += 0xE00025B3;
-        v = (v >> 14);
-        v = v | (v << 18);
+        v = v + 0xdf0a59;
+        v = v ^ 0x22016506;
+        v = (v >> 10) | (v << 22);
+        v = v - 0x136c7cc5;
         chunks[i] = v;
     }
 
