@@ -35,7 +35,7 @@ namespace Offsets
 	{
 		constexpr const static size_t IsNpckk__BackingField = 0x3E0;
 		constexpr const static size_t multiMesh = 0x398;
-		constexpr const static size_t newVelocity = 0x1F8;
+		constexpr const static size_t newVelocity = 0x31c;
 	};
 
 	namespace SkinnedMultiMesh
