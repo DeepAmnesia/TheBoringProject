@@ -8,7 +8,8 @@ std::uint64_t DecryptClActiveItem(std::uint64_t a1)
         std::uint32_t v = chunks[i];
         v ^= 0x537C2A57;
         v += 0xE00025B3;
-        v = _rotl(v, 18);
+        v = (v >> 14);
+        v = v | (v << 18);
         chunks[i] = v;
     }
 
