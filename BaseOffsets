@@ -27,7 +27,7 @@ namespace Offsets
     }
     namespace Fov
     {
-        constexpr uintptr_t GraphicFov   = 0x1167ef50;
+        constexpr uintptr_t GraphicFov   = 0x11995290;
         constexpr uintptr_t fieldOffset  = 0x100;   
     }
 }
